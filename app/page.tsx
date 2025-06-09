@@ -92,14 +92,12 @@ export default function WeddingWebsite() {
       .then(setChurchQR)
 
     // Generate QR code for website URL
-    if (typeof window !== 'undefined') {
-      QRCode.toDataURL(window.location.href, { 
-        width: 256, 
-        margin: 2, 
-        color: { dark: '#B91C1C', light: '#FFF' } 
-      })
-      .then(setWebsiteQR)
-    }
+    QRCode.toDataURL('https://mike-and-rose-wedding-invitation.vercel.app/', { 
+      width: 256, 
+      margin: 2, 
+      color: { dark: '#B91C1C', light: '#FFF' } 
+    })
+    .then(setWebsiteQR)
 
     return () => {
       clearInterval(timer)
@@ -1064,7 +1062,7 @@ export default function WeddingWebsite() {
                 </p>
                 <div className="bg-rose-50 rounded-xl p-6 border border-rose-200">
                   <p className="text-sm text-rose-600 font-medium playfair-display">
-                    {typeof window !== 'undefined' ? window.location.href : 'Loading...'}
+                    https://mike-and-rose-wedding-invitation.vercel.app/
                   </p>
                 </div>
               </CardContent>

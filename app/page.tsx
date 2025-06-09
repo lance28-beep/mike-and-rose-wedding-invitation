@@ -36,6 +36,7 @@ import QRCode from 'qrcode'
 import { FaFacebookF, FaInstagram, FaFacebookMessenger, FaArrowUp } from 'react-icons/fa';
 import RSVPForm from '@/components/RSVPForm';
 import BookOfGuests from '@/components/BookOfGuests';
+import MessageWallDisplay from '../components/MessageWallDisplay';
 
 type Message = {
   timestamp: string;
@@ -498,15 +499,7 @@ export default function WeddingWebsite() {
                 </a>
               </div>
               <div className="space-y-6 md:space-y-10">
-                <div className="hidden md:block">
-                  <MessageMarquee messages={messages} direction="left" speed={12} />
-                </div>
-                <div className="hidden md:block">
-                  <MessageMarquee messages={messages} direction="right" speed={12} />
-                </div>
-                <div className="block md:hidden">
-                  <MessageMarquee messages={messages} direction="left" speed={18} />
-                </div>
+                <MessageWallDisplay messages={messages} loading={loading} />
               </div>
               <div className="text-center mb-10 mt-8">
                 <h3 className="great-vibes-regular text-2xl md:text-3xl text-rose-600 mb-2">Leave Your Congratulations</h3>

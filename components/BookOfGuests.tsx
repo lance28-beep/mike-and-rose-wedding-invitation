@@ -110,7 +110,6 @@ export default function BookOfGuests() {
     <div className="w-full max-w-4xl mx-auto">
       <Card className="border-2 border-[#D4AF37] shadow-xl glass-card">
         <CardHeader className="text-center">
-          <CardTitle className="great-vibes-regular text-3xl md:text-4xl text-[#B91C1C] mb-2">Book of Guests</CardTitle>
           <div className="flex items-center justify-center gap-2 text-[#B8860B]">
             <Users className="h-5 w-5" />
             <span className="playfair-display text-lg">Total Guests: {totalGuests}</span>
